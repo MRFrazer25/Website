@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthew Frazer - Cybersecurity Student</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <style>
+    /* This line brings in a special font (Inter) from Google Fonts for the website.
+       Other main style rules for Tailwind CSS are in the src/input.css file. */
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+    /* Basic styles for the whole page body */
+    body {
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #0F172A;
+      color: #E2E8F0;
+      overflow-x: hidden;
+    }
+
+    /* Styles for the full-screen background image that stays fixed */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url("images/site.png")
+        no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    /* Special styles for the background image when viewed on phones (portrait mode) */
+    @media (orientation: portrait) and (max-width: 768px) {
+      body::before {
+        background-attachment: scroll;
+      }
+    }
+
+    /* Optional: Custom styles for the scrollbar (works in Chrome, Edge, Safari) */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1E293B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #38BDF8;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0EA5E9;
+    }
+
+    /* Styles for the boxes that hold content, making them semi-transparent with a blur effect */
+    .content-box {
+      background-color: rgba(30, 41, 59, 0.85);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+  </style>
+</head>
+<body class="text-slate-200"> <main class="flex flex-col items-center justify-start min-h-screen px-4 py-12 sm:py-20 gap-12">
+
+    <section
+      id="intro"
+      aria-labelledby="intro-heading"
+      class="content-box max-w-2xl w-full p-8 sm:p-10 rounded-2xl shadow-2xl text-center"
+    >
+      <h1
+        id="intro-heading"
+        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 text-sky-400"
+      >
+        Matthew Frazer
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-300 mb-5">
+        Student At Lasell University (2022-2026)
+      </p>
+      <div class="space-y-1">
+        <p class="text-slate-400 text-md sm:text-lg">Major: <span class="font-medium text-slate-300">Cybersecurity</span></p>
+        <p class="text-slate-400 text-md sm:text-lg">Minor: <span class="font-medium text-slate-300">Entrepreneurship</span></p>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      class="content-box max-w-2xl w-full p-8 sm:p-10 rounded-2xl shadow-xl"
+    >
+      <h2
+        id="about-heading"
+        class="text-3xl sm:text-4xl font-bold text-sky-400 mb-6"
+      >
+        About Me
+      </h2>
+      <p class="text-slate-300 mb-8 text-base sm:text-lg leading-relaxed">
+        Hello! I'm Matthew Frazer, I'm pursuing a major in Cybersecurity and a minor in Entrepreneurship at Lasell University (Expected to graduate May 2026). Beyond my interests in cybersecurity, I'm also passionate about fitness, health, cooking, and reading books.
+      </p>
+      <h3 class="text-xl sm:text-2xl font-semibold text-sky-300 mb-4">Skills</h3>
+      <ul
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-slate-300 list-none sm:text-base"
+      >
+        <li class="bg-slate-700/50 p-3 rounded-lg shadow-md"><strong class="font-semibold text-sky-400">Coding:</strong> Python, HTML5, PowerShell, Bash</li>
+        <li class="bg-slate-700/50 p-3 rounded-lg shadow-md"><strong class="font-semibold text-sky-400">AI:</strong> Prompt Engineering, LLMs, AI Tools</li>
+        <li class="bg-slate-700/50 p-3 rounded-lg shadow-md"><strong class="font-semibold text-sky-400">Tools:</strong> Git, Wireshark, Splunk, Ghidra, Velociraptor</li>
+      </ul>
+    </section>
+
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      class="content-box max-w-2xl w-full p-8 sm:p-10 rounded-2xl shadow-xl"
+    >
+      <h2
+        id="projects-heading"
+        class="text-3xl sm:text-4xl font-bold text-sky-400 mb-8"
+      >
+        My Projects
+      </h2>
+      <div class="space-y-8">
+        <article
+          class="bg-slate-700/40 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-sky-500/30 hover:border-sky-500/50 border border-transparent"
+        >
+          <h3 class="text-2xl font-semibold text-sky-300 mb-3">2FA Authenticator App</h3>
+          <p class="text-slate-400 text-sm sm:text-base mb-4 leading-relaxed">
+            A secure and user-friendly two-factor authentication (2FA) application for managing Time-based One-Time Passwords (TOTP). Built with Python (CustomTkinter for GUI). This app utilizes pyotp to generate codes, keyring to securely store secrets locally, and cryptography for data encryption.
+          </p>
+          <div class="mt-4">
+            <a
+              href="https://github.com/MRFrazer25/2FA-App"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium py-2 px-5 rounded-lg transition-colors duration-200 shadow hover:shadow-md"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="bg-slate-700/40 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-sky-500/30 hover:border-sky-500/50 border border-transparent"
+        >
+          <h3 class="text-2xl font-semibold text-sky-300 mb-3">Homework Tracker</h3>
+          <p class="text-slate-400 text-sm sm:text-base mb-4 leading-relaxed">
+            A Python application (Using tkinter and ttkbootstrap for GUI) for students to manage assignments by difficulty, priority, subject, and due dates. Includes a calendar, data visualization (matplotlib), and a basic NLU chatbot (Transformers, PyTorch) with Memory integrated with it (Langchain).
+          </p>
+          <div class="mt-4">
+            <a
+              href="https://github.com/MRFrazer25/Homework-Tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium py-2 px-5 rounded-lg transition-colors duration-200 shadow hover:shadow-md"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="bg-slate-700/40 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-sky-500/30 hover:border-sky-500/50 border border-transparent">
+          <h3 class="text-2xl font-semibold text-sky-300 mb-3">
+            Enhanced HIBP Checker
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base mb-4 leading-relaxed">
+            Python application that uses local Ollama LLM models to give advice on results found from HIBP (Have I Been Pwned) API. Uses PyQt6 for the GUI, and keyring for storing the users HIBP API key securely.
+          </p>
+          <div class="mt-4">
+            <a
+              href="https://github.com/MRFrazer25/Enhanced-HIBP-Checker"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium py-2 px-5 rounded-lg transition-colors duration-200 shadow hover:shadow-md"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer
+    class="fixed bottom-4 right-4 md:bottom-6 md:right-6 flex items-center gap-4 sm:gap-5 bg-slate-800/85 backdrop-blur-lg px-4 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-2xl z-50 border border-slate-700/70"
+    aria-label="Contact information and social links"
+  >
+    <a
+      href="mailto:matthewrfrazer15@gmail.com"
+      class="group relative flex flex-col items-center text-slate-300 hover:text-sky-400 transition-colors duration-200 p-1"
+      aria-label="Email Matthew Frazer"
+    >
+      <img
+        src="images/mail.svg" 
+        class="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-transform duration-150"
+        alt="Email icon"
+        onerror="this.nextElementSibling.style.display='inline'; this.style.display='none';" 
+      />
+      <span class="icon-text-label sr-only sm:not-sr-only text-xs mt-1 opacity-75 group-hover:opacity-100">Email</span>
+      <span class="absolute left-1/2 -translate-x-1/2 -top-10 w-auto min-w-max p-2 text-xs text-white bg-slate-700 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        matthewrfrazer15@gmail.com
+      </span>
+    </a>
+    <a
+      href="https://github.com/MRFrazer25"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative flex flex-col items-center text-slate-300 hover:text-sky-400 transition-colors duration-200 p-1"
+      aria-label="Matthew Frazer's GitHub Profile"
+    >
+      <img
+        src="images/github.svg" 
+        class="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-transform duration-150"
+        alt="GitHub logo"
+        onerror="this.nextElementSibling.style.display='inline'; this.style.display='none';"
+      />
+      <span class="icon-text-label sr-only sm:not-sr-only text-xs mt-1 opacity-75 group-hover:opacity-100">GitHub</span>
+      <span class="absolute left-1/2 -translate-x-1/2 -top-10 w-auto min-w-max p-2 text-xs text-white bg-slate-700 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        MRFrazer25
+      </span>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/matthew-frazer-5961602a0/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group relative flex flex-col items-center text-slate-300 hover:text-sky-400 transition-colors duration-200 p-1"
+      aria-label="Matthew Frazer's LinkedIn Profile"
+    >
+      <img
+        src="images/linkedin.svg" 
+        class="w-6 h-6 sm:w-7 sm:h-7 group-hover:scale-110 transition-transform duration-150"
+        alt="LinkedIn logo"
+        onerror="this.nextElementSibling.style.display='inline'; this.style.display='none';"
+      />
+      <span class="icon-text-label sr-only sm:not-sr-only text-xs mt-1 opacity-75 group-hover:opacity-100">LinkedIn</span>
+      <span class="absolute left-1/2 -translate-x-1/2 -top-10 w-auto min-w-max p-2 text-xs text-white bg-slate-700 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        View Profile
+      </span>
+    </a>
+  </footer>
+</body>
+</html>

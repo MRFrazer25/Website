@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+     @layer components {
+       .my-custom-button {
+         @apply py-2 px-4 bg-sky-500 text-white font-semibold rounded-lg shadow-md;
+         @apply hover:bg-sky-600;
+       }
+     }
+
+     @layer base {
+       h1 {
+         /* Makes all H1 headings large and bold using Tailwind classes */
+         @apply text-3xl font-bold;
+       }
+     }

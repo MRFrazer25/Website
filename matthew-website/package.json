@@ -1,0 +1,25 @@
+{
+    "name": "matthew-website",
+    "version": "1.0.0",
+    "description": "Personal portfolio website for Matthew Frazer, showcasing skills and projects. Built with HTML, Tailwind CSS, and served via Node.js/Express for local development.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js",
+      "build:css": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+      "watch:css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "express": "^4.18.2"
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.4.3",
+      "postcss": "^8.4.38",
+      "autoprefixer": "^10.4.19"
+    },
+    "engines": {
+      "node": ">=16.0.0"
+    },
+    "author": "Matthew Frazer"
+  }
+  
